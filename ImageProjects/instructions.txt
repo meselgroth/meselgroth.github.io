@@ -2,3 +2,8 @@ scale 100x130, 90% opaque
 add layer mask, add gradient 
 add new layer, select from top middle to bottom 3rd quarter, fill white 40 opaque
 canvas size to add 50px to right
+
+drop shadow
+-3,-3,6
+60, 4d4d4d
+resize
