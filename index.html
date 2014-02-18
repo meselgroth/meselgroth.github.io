@@ -5,96 +5,301 @@
     <!--<link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link href="Content/carousel2.css" rel="stylesheet" />
 </head>
 <body>
-    <header class="container jumbotron" style="background-color: #BDD6EE">
-        <h1>Michael Clive Eselgroth</h1>
-        <h2>MC Software Solutions</h2>
-        <p>Agile developer, systems designer, architect, problem solver</p>
-    </header>
 
-    <section class="container" style="background-color: #F2F2F2;">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h2>Ecommerce Web Application Development</h2>
-                </div>
-                <div class="col-md-2">
-                    <img src="images/hotels4u.png" alt="Alternate Text" />
-                </div>
-                <div class="col-md-2">
-                    <h4 class="">Nov – Present</h4>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Michael Clive Eselgroth</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Homepage</a></li>
+                    <li><a href="http://mcsoftwaresolutions.blogspot.com">Blog</a></li>
+                    <li><a href="http://www.linkedin.com/profile/view?id=54305118">LinkedIn</a></li>
+                    <li><a href="mailto:meselgroth@yahoo.com">Contact</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container">
+        <header style="margin-top:120px">
+            <h1>Michael Clive Eselgroth</h1>
+            <h2>MC Software Solutions</h2>
+        </header>
+        <div class='row'>
+            <div class='col-md-offset-2 col-md-8'>
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                    <!-- Bottom Carousel Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#quote-carousel" data-slide-to="1"></li>
+                        <li data-target="#quote-carousel" data-slide-to="2"></li>
+                        <li data-target="#quote-carousel" data-slide-to="3"></li>
+                        <li data-target="#quote-carousel" data-slide-to="4"></li>
+                        <li data-target="#quote-carousel" data-slide-to="5"></li>
+                    </ol>
+
+                    <!-- Carousel Slides / Quotes -->
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img class="img-circle" src="images/HandsomeBugger-1_1.jpg" style="width: 100px;height:100px;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3>Agile developer, systems designer, architect, problem solver</h3>
+                                </div>
+                            </div>
+
+                        </div>                        
+                        <!-- Slide 2 -->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img src="http://blog.apterainc.com/Portals/213381/images/micro_net.png" style="width: 100px;height:100px;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3>Middleware, SOA</h3>
+                                    <p>Biz-talk, WCF, Web-api</p>
+                                </div>
+                            </div>
+                        </div>                        
+                        <!-- Slide 3 -->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" style="width: 100px;height:100px;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3>Desktop and Web Applications</h3>
+                                    <p>Server-side ASP.Net. Client-side JS. WPF. Windows 8 apps.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img src="http://www.solutionsiq.com/Portals/93486/images/Agile-Team-Professionals-Solutions-IQ1.jpg" style="width: 100px;height:100px;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3>Deliver value fast</h3>
+                                    <p>Reducing the feedback loop with incremental updates delivered in short iterations. Fail fast. Apply Scrum or Kanban.</p>
+                                </div>
+                            </div>
+                        </div>                        
+                        <!-- Slide 5 -->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Extreme_Programming.svg/367px-Extreme_Programming.svg.png" style="width: 100px;height:100px;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3>Produce high quality, maintainable, tested software</h3>
+                                    <p>With popular eXtreme Programming techniques: BDD with Specflow, TDD with Moq, Pair programming/commits.</p>
+                                    <p>SOLID principles</p>
+                                </div>
+                            </div>
+                        </div>                       
+                        <!-- Slide 6 -->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img src="http://readwrite.com/files/DevOps-infinity-loop,png.png" style="width: 100px;height:100px;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3>Devops</h3>
+                                    <p>Continuous integration with Jenkins, TFS and Team City. Continuous Deployment with Click-Once, MSDeploy and Powershell</p>
+                                    <p>Continuous delivery with incremental releases and an automated build-pipeline.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Buttons Next/Prev -->
+                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                    <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
                 </div>
             </div>
-            <h3>Hotels4u.com, London – Senior C# Developer</h3>
+        </div>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <!--<div class="container marketing">
+
+        <div class="row">
+            <div class="col-lg-4">
+                <img  src="images/bbcw.png" >
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <img src="images/hotels4u.png">
+                <h2>Heading</h2>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <img src="images/dataseeker1.png">
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            </div>
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">-->
+
+        <!-- /END THE FEATURETTES -->
+
+
+
+        <section class="container" style="background-color: #F2F2F2;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>Ecommerce Web Application Development</h2>
+                    </div>
+                    <div class="col-md-2">
+                        <img src="images/hotels4u.png" alt="Alternate Text" />
+                    </div>
+                    <div class="col-md-2">
+                        <h4 class="">Nov – Present</h4>
+                    </div>
+                </div>
+                <h3>Hotels4u.com, London – Senior C# Developer</h3>
+                <p>
+                    Ecommerce platform built on C# booking system with mixture of ASP.Net Web Forms, MVC and Angular/Backbone JS frontends
+                </p>
+                <ul>
+                    <li>Rebranding of website</li>
+                    <li>Stress/Load testing setup in VS running TFS utilising Azure cloud and lab management</li>
+                    <li>Refactoring analysis into removing legacy VB.Net code</li>
+                    <li>Analysis for migration from TFS 2008 source control, nightly builds and VS 2008 to modern VCS, continuous integration, build pipeline and VS 2013</li>
+                    <li>Migration to TFS 2013 with Git and Team City and VS 2013</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="container" style="background-color: #D5DCE4; background-position: right; background-image: url(images/bbcw.png); background-repeat: no-repeat">
+            <div class="row">
+                <div class="col-md-10">
+                    <h2>Integrations and Web Application Development</h2>
+                </div>
+                <!--<div class="col-md-2">
+                    <img src="images/bbcw.png" />
+                </div>-->
+                <div class="col-md-2">
+                    <h4 class="">Aug – Nov 2013</h4>
+                </div>
+            </div>
+
+            <h3>BBC Worldwide, London – Senior C# Developer</h3>
             <p>
-                Ecommerce platform built on C# booking system with mixture of ASP.Net Web Forms, MVC and Angular/Backbone JS frontends
+                Building a full-blown asset and rights management system and integrating with the SAP finance system
             </p>
             <ul>
-                <li>Rebranding of website</li>
-                <li>Stress/Load testing setup in VS running TFS utilising Azure cloud and lab management</li>
-                <li>Refactoring analysis into removing legacy VB.Net code</li>
-                <li>Analysis for migration from TFS 2008 source control, nightly builds and VS 2008 to modern VCS, continuous integration, build pipeline and VS 2013</li>
-                <li>Migration to TFS 2013 with Git and Team City and VS 2013</li>
+                <li>Service integration of SOA systems over enterprise service bus</li>
+                <li>Online BBC catalogue web application, streamlining multicomponent back-end and adding new features to a ASP.Net mixed Webform/MVC front-end</li>
+                <li>Web-app global asset search, Knockout and WebAPI</li>
+                <li>Transformation of finance data from SAP into media rights system achieved with a decision engine pattern</li>
+                <li>Large agile team including automated testers, architects and BAs applying BDD with initially Scrum, then Kanban approaches</li>
             </ul>
-        </div>
-        
-    </section>
+        </section>
 
-    <section class="container" style="background-color: #D5DCE4; background-position: right; background-image: url(images/bbcw.png); background-repeat: no-repeat">
-        <div class="row">
-            <div class="col-md-10">
-                <h2>Integrations and Web Application Development</h2>
+        <section class="container" style="background-color: #F2F2F2; background-position: right; background-image: url(images/dataseeker1.png); background-repeat: no-repeat">
+            <div class="row">
+                <div class="col-md-10">
+                    <h2>Distributed Systems and Web Application Development</h2>
+                </div>
+                <div class="col-md-2">
+                    <h4 class="">Feb – May 2013</h4>
+                </div>
             </div>
-            <!--<div class="col-md-2">
-                <img src="images/bbcw.png" />
-            </div>-->
-            <div class="col-md-2">
-                <h4 class="">Aug – Nov 2013</h4>
-            </div>
-        </div>
 
-        <h3>BBC Worldwide, London – Senior C# Developer</h3>
-        <p>
-            Building a full-blown asset and rights management system and integrating with the SAP finance system
-        </p>
-        <ul>
-            <li>Service integration of SOA systems over enterprise service bus</li>
-            <li>Online BBC catalogue web application, streamlining multicomponent back-end and adding new features to a ASP.Net mixed Webform/MVC front-end</li>
-            <li>Web-app global asset search, Knockout and WebAPI</li>
-            <li>Transformation of finance data from SAP into media rights system achieved with a decision engine pattern</li>
-            <li>Large agile team including automated testers, architects and BAs applying BDD with initially Scrum, then Kanban approaches</li>
-        </ul>
-    </section>
+            <h3>Mongoose Search Ltd, London – C# Software Developer</h3>
+            <p>
+                Mongoose Search (now data seeker) delivers search systems to large enterprises. Their main product is an extensive pipeline for retrieving documents and images from many sources, reading their metadata and adding this data to a searchable index.
+            </p>
+            <ul>
+                <li>Parallel, distributed and high performance systems development including application processing 75,000 HL7 messages per hour</li>
+                <li>Lead development of ASP.Net MVC front-end</li>
+                <li>Provide assistance and guidance for maturing development process, introducing CI and TDD</li>
+                <li>Re-engineer existing software to provide enhanced maintainability, readability and testability, adding performance improvements</li>
+                <li>Mentor Junior Developer with pair programming, teaching best practices and SOLID design principles</li>
+            </ul>
+        </section>
 
-    <section class="container" style="background-color: #F2F2F2; background-position: right; background-image: url(images/dataseeker1.png); background-repeat: no-repeat">
-        <div class="row">
-            <div class="col-md-10">
-                <h2>Distributed Systems and Web Application Development</h2>
-            </div>
-            <div class="col-md-2">
-                <h4 class="">Feb – May 2013</h4>
-            </div>
-        </div>
 
-        <h3>Mongoose Search Ltd, London – C# Software Developer</h3>
-        <p>
-            Mongoose Search (now data seeker) delivers search systems to large enterprises. Their main product is an extensive pipeline for retrieving documents and images from many sources, reading their metadata and adding this data to a searchable index.
-        </p>
-        <ul>
-            <li>Parallel, distributed and high performance systems development including application processing 75,000 HL7 messages per hour</li>
-            <li>Lead development of ASP.Net MVC front-end</li>
-            <li>Provide assistance and guidance for maturing development process, introducing CI and TDD</li>
-            <li>Re-engineer existing software to provide enhanced maintainability, readability and testability, adding performance improvements</li>
-            <li>Mentor Junior Developer with pair programming, teaching best practices and SOLID design principles</li>
-        </ul>
-    </section>
-    <footer>
-        <div class="container text-right">
-            &copy; MC Software Solutions Ltd. 2014
-        </div>
-    </footer>
+
+        <!-- FOOTER -->
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>&copy; MC Software Solutions Ltd. 2014
+        </footer>
+
+    </div><!-- /.container -->
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!--<script src="Scripts/bootstrap.min.js"></script>-->
+
 </body>
 </html>
