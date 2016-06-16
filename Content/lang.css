@@ -3,6 +3,19 @@ body {
 
 
 .langA {
+    /* float: right; */
+    /* text-align: right; */
+}
+
+.langB {
     float: left;
-    display: inline;
+    border-right: 1px solid;
+    margin-right: 4px;
+    padding-right: 4px;
+}
+
+button#showA {
+    position: fixed;
+    right: 50%;
+    top: 10px;
 }
