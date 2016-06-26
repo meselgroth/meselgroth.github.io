@@ -5,15 +5,14 @@
         .module('learnLanguage')
         .controller('memoryController', memoryController);
 
-    memoryController.$inject = ['phraseFactory'];
+    memoryController.$inject = ['answersFactory'];
 
-    function memoryController(phraseFactory) {
+    function memoryController(answersFactory) {
         /* jshint validthis:true */
         var vm = this;
         
-        vm.Phrases = phraseFactory.getPhrases();
-        vm.NextPhrase = phraseFactory.nextPhrase();
-        vm.PossibleAnswers = phraseFactory.getPossibleAnswers(vm.NextPhrase);
+        vm.NextPhrase = answersFactory.nextPhrase();
+        vm.PossibleAnswers = answersFactory.getPossibleAnswers(vm.NextPhrase);
         vm.Submit = submit;
 
         function submit() {

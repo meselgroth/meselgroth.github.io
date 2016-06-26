@@ -14,7 +14,7 @@
         return service;
 
         function generate(top, bottom) {
-            var number = Math.random() * (top - bottom) + bottom;
+            var number = Math.floor(Math.random() * (top - bottom)) + bottom;
             return number;
         }
     }
