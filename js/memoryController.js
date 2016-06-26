@@ -10,17 +10,18 @@
     function memoryController(phrasesFactory, answersFactory) {
         /* jshint validthis:true */
         var vm = this;
-
-        phrasesFactory.query(function (phrases) {
+        
+        vm.Phrases = phrasesFactory.query(function (phrases) {
             vm.NextPhrase = answersFactory.nextPhrase(phrases);
             vm.PossibleAnswers = answersFactory.getPossibleAnswers(vm.NextPhrase, phrases);
         });
-        
+
         vm.Submit = submit;
 
         function submit() {
             if (vm.ChosenAnswer === vm.NextPhrase.Answer) {
-                alert('wohoo');
+                vm.NextPhrase = answersFactory.nextPhrase(vm.Phrases);
+                vm.PossibleAnswers = answersFactory.getPossibleAnswers(vm.NextPhrase, vm.Phrases);
             }
         }
 
