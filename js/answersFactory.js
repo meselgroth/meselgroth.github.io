@@ -5,27 +5,26 @@
         .module('learnLanguage')
         .factory('answersFactory', answersFactory);
 
-    answersFactory.$inject = ['$resource', 'randomiserFactory','phrasesFactory'];
+    answersFactory.$inject = ['$resource', 'randomiserFactory'];
 
-    function answersFactory($resource, randomiserFactory, phrasesFactory) {
+    function answersFactory($resource, randomiserFactory) {
         var service = {
             nextPhrase: nextPhrase,
             getPossibleAnswers: getPossibleAnswers
         };
         
         var numOfAnswers = 4;
+        var phrases;
 
         return service;
 
-        function getPhrases() {
-            return phrasesFactory.getPhrases();
+        function nextPhrase(phrasesNotAsync) {
+            phrases = phrasesNotAsync;
+            return phrases[randomPhraseIndex()];
         }
 
-        function nextPhrase() {
-            return getPhrases()[randomPhraseIndex()];
-        }
-
-        function getPossibleAnswers(chosenPhrase) {
+        function getPossibleAnswers(chosenPhrase, phrasesNotAsync) {
+            phrases = phrasesNotAsync;
             var answers = [];
             answers[randomAnswerIndex()] = chosenPhrase.Answer;
             answers[newRandomIndex(answers)] = newRandomAnswer(answers);
@@ -38,7 +37,7 @@
             var newAnswer;
             var count = 0;
             do {
-                newAnswer = getPhrases()[randomPhraseIndex()].Answer;
+                newAnswer = phrases[randomPhraseIndex()].Answer;
                 count++;
             } while (answers.includes(newAnswer) && count < getPhrasesLength() * 5)
             return newAnswer;
@@ -60,7 +59,7 @@
             return randomiserFactory.generate(numOfAnswers, 0);
         }
         function getPhrasesLength() {
-            return getPhrases().length;
+            return phrases.length;
         }
     }
 })();

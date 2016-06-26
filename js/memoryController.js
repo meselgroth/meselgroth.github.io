@@ -5,18 +5,21 @@
         .module('learnLanguage')
         .controller('memoryController', memoryController);
 
-    memoryController.$inject = ['answersFactory'];
+    memoryController.$inject = ['phrasesFactory', 'answersFactory'];
 
-    function memoryController(answersFactory) {
+    function memoryController(phrasesFactory, answersFactory) {
         /* jshint validthis:true */
         var vm = this;
+
+        phrasesFactory.query(function (phrases) {
+            vm.NextPhrase = answersFactory.nextPhrase(phrases);
+            vm.PossibleAnswers = answersFactory.getPossibleAnswers(vm.NextPhrase, phrases);
+        });
         
-        vm.NextPhrase = answersFactory.nextPhrase();
-        vm.PossibleAnswers = answersFactory.getPossibleAnswers(vm.NextPhrase);
         vm.Submit = submit;
 
         function submit() {
-            if (vm.ChosenAnswer === vm.ChosenPhrase.Answer) {
+            if (vm.ChosenAnswer === vm.NextPhrase.Answer) {
                 alert('wohoo');
             }
         }

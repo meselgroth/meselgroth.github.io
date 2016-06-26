@@ -1,21 +1,23 @@
 ﻿describe('PhrasesFactory', function () {
-    var answersFactory, $httpBackend;
-    var phrases, correctAnswer;
+    var phrasesFactory, $httpBackend;
+    var phrases;
 
     beforeEach(function () {
         module('learnLanguage');
-        inject(function (_answersFactory_, _$httpBackend_) {
-            answersFactory = _answersFactory_;
+        inject(function (_phrasesFactory_, _$httpBackend_) {
+            phrasesFactory = _phrasesFactory_;
             $httpBackend = _$httpBackend_;
         });
-
-        $httpBackend.when('GET', 'js/phrases.js')
-                            .respond([{ Phrase: "Anon pengalan mo?", Answer: "What is your name?" }, { Phrase: "asdf", Answer: "qwerty" }, { Phrase: "zxcv", Answer: "ghjk" }, { Phrase: "asdf", Answer: "qwerty1" }, { Phrase: "zxcv", Answer: "ghjk1" }, { Phrase: "zxcv", Answer: "12345" }]);
+        phrases = [{ Phrase: "Anon pengalan mo?", Answer: "What is your name?" }, { Phrase: "asdf", Answer: "qwerty" }, { Phrase: "zxcv", Answer: "ghjk" }, { Phrase: "asdf", Answer: "qwerty1" }, { Phrase: "zxcv", Answer: "ghjk1" }, { Phrase: "zxcv", Answer: "12345" }];
+        $httpBackend.when('GET', 'js/phrases.js').respond(phrases);
     });
 
-    it('nextPhrase should return random phrase', function () {
-        var actual = answersFactory.getPhrases();
-        //expect(actual.Phrase).toBe(phrases[0].Phrase);
+    it('Get phrases should call $resource and return phrases', function (done) {
+        phrasesFactory.query(function (data) {
+            expect(data.length).toBe(phrases.length);
+            done();
+        });
+        $httpBackend.flush();
     });
 
 });
