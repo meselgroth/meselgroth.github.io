@@ -1,2 +1,3 @@
 packages/*
 *.suo
+node_modules

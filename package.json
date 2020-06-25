@@ -1,0 +1,26 @@
+{
+  "name": "meselgroth.github.io",
+  "version": "1.0.0",
+  "description": "Public website (always a work in progress)",
+  "main": "index.html",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "browser-sync -w --ignore=*.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meselgroth/meselgroth.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meselgroth/meselgroth.github.io/issues"
+  },
+  "homepage": "https://github.com/meselgroth/meselgroth.github.io#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
